@@ -9,25 +9,26 @@ The console is the first segment of the AirBnB project at Holberton School that 
 * Destroy an object
 
 ## Table of Content
-* [Environment](#environment)
-* [Installation](#installation)
-* [File Descriptions](#file-descriptions)
-* [Usage](#usage)
-* [Examples of use](#examples-of-use)
-* [Bugs](#bugs)
-* [Author](#author)
-* [License](#license)
+* [ENVIRONMENT](#ENVIRONMENT)
+* [INSTALLATION](#INSTALLATION)
+* [FILE DESCRIPTIONS](#FILE-DESCRIPTIONS)
+* [USAGE](#USAGE)
+* [EXAMPLES OF USE](#EXAMPLES-OF-USE)
+* [BUGS](#BUGS)
+* [AUTHOR](#AUTHOR)
+* [LICENCE](#LICENCE)
+* [CONCEPT LEARNT](#'CONCEPTS-LEARNT')
 
-## Environment
+## ENVIRONMENT
 This project is interpreted/tested on Ubuntu 14.04 LTS using python3 (version 3.4.3)
 
-## Installation
+## INSTALLATION
 * Clone this repository: `git clone "https://github.com/alexaorrico/AirBnB_clone.git"`
 * Access AirBnb directory: `cd AirBnB_clone`
 * Run hbnb(interactively): `./console` and enter command
 * Run hbnb(non-interactively): `echo "<command>" | ./console.py`
 
-## File Descriptions
+## FILE DESCRIPTIONS
 [console.py](console.py) - the console contains the entry point of the command interpreter. 
 List of commands this console current supports:
 * `EOF` - exits console 
@@ -127,7 +128,7 @@ TestBaseModel class:
 * `def test_user_class_docstring(self)` - Test for the User class docstring
 
 
-## Examples of use
+## EXAMPLE OF USE
 ```bash
 ronald@ubuntu:~$ ./console.py
 (hbnb) help
@@ -150,12 +151,34 @@ EOF  all  create  destroy  help  quit  show  update
 (hbnb) quit
 ```
 
-## Bugs
-No known bugs at this time. 
+## BUGS
+No known bugs at this time.
 
-## Author
+## CONCEPTS LEARNT
+
+-    How to create a Python package
+-    How to create a command interpreter in Python using the `cmd` module
+-    What is Unit testing and how to implement it in a large project
+-    How to serialize and deserialize a Class
+-    How to write and read a JSON file
+-    How to manage `datetime`
+-    What is an `UUID`
+-    What is `*args` and how to use it
+-    What is `**kwargs` and how to use it
+-    How to handle named arguments in a function
+
+## AUTHOR
 Abimbola Ronald - [Github](https://github.com/Ronnie5562)
 
+```
 
-## License
+░█████╗░██╗██████╗░██████╗░███╗░░██╗██████╗░  ░█████╗░██╗░░░░░░█████╗░███╗░░██╗███████╗
+██╔══██╗██║██╔══██╗██╔══██╗████╗░██║██╔══██╗  ██╔══██╗██║░░░░░██╔══██╗████╗░██║██╔════╝
+███████║██║██████╔╝██████╦╝██╔██╗██║██████╦╝  ██║░░╚═╝██║░░░░░██║░░██║██╔██╗██║█████╗░░
+██╔══██║██║██╔══██╗██╔══██╗██║╚████║██╔══██╗  ██║░░██╗██║░░░░░██║░░██║██║╚████║██╔══╝░░
+██║░░██║██║██║░░██║██████╦╝██║░╚███║██████╦╝  ╚█████╔╝███████╗╚█████╔╝██║░╚███║███████╗
+╚═╝░░╚═╝╚═╝╚═╝░░╚═╝╚═════╝░╚═╝░░╚══╝╚═════╝░  ░╚════╝░╚══════╝░╚════╝░╚═╝░░╚══╝╚══════╝
+```
+
+## LICENCE
 Public Domain. No copy write protection. 
