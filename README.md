@@ -17,7 +17,7 @@ The console is the first segment of the AirBnB project at Holberton School that 
 * [BUGS](#BUGS)
 * [AUTHOR](#AUTHOR)
 * [LICENCE](#LICENCE)
-* [CONCEPT LEARNT](#'CONCEPTS-LEARNT')
+* [CONCEPTS LEARNT](#'CONCEPTS-LEARNT')
 
 ## ENVIRONMENT
 This project is interpreted/tested on Ubuntu 14.04 LTS using python3 (version 3.4.3)
@@ -128,7 +128,7 @@ TestBaseModel class:
 * `def test_user_class_docstring(self)` - Test for the User class docstring
 
 
-## EXAMPLE OF USE
+## EXAMPLES OF USE
 ```bash
 ronald@ubuntu:~$ ./console.py
 (hbnb) help
