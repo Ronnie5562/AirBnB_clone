@@ -30,4 +30,3 @@ class BaseModel:
         else:
             for key, value in kwargs.items():
                 if key == '__class__':
-                    
