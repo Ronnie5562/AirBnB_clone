@@ -29,4 +29,22 @@ class BaseModel:
             storage.new(self)
         else:
             for key, value in kwargs.items():
-                if key == '__class__':
+                if key != '__class__':
+                    if key in ['created_at', 'updated_at']:
+                        setattr(self, key, datetime.isoformat(value))
+                    else:
+                        setattr(self, key, value)
+    
+    def __str__(self):
+        """_summary_
+            Returns the string representation of BaseModel object in this format: [<class name>] (<self.id>) <self.__dict__>
+        """
+        return "[{}] ({}) {}".format(type(self).__name__, self.id, self.__dict__)
+    
+    def save(self):
+        """_summary_
+            save(self): updates the public instance attribute updated_at with the current datetime
+        """
+        self.updated_at = datetime.now()
+        storage.save()
+
