@@ -128,8 +128,8 @@ TestBaseModel class:
 
 
 ## Examples of use
-```
-vagrantAirBnB_clone$./console.py
+```bash
+ronald@ubuntu:~$ ./console.py
 (hbnb) help
 
 Documented commands (type help <topic>):
