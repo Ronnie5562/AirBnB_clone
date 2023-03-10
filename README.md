@@ -166,6 +166,7 @@ No known bugs at this time.
 -    What is `*args` and how to use it
 -    What is `**kwargs` and how to use it
 -    How to handle named arguments in a function
+-    Serialization and DeserialiZation using `json`
 
 ## AUTHOR
 Abimbola Ronald - [Github](https://github.com/Ronnie5562)
