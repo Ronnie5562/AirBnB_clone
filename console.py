@@ -46,7 +46,6 @@ class HBNBCommand(cmd.Cmd):
         """
         pass
 
-    def 
 
 
 
