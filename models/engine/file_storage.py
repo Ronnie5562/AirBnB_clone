@@ -61,6 +61,7 @@ class FileStorage:
             with open(self.__file_path, mode="r") as file:
                 json_data = json.load(file)
             for key in json_data:
+                # The code below, creates a new instance of our models_classes depending on the json_data received.
                 self.__objects[key] = models_classes[json_data[key]['__class__']](**json_data[key])
         except:
             pass
