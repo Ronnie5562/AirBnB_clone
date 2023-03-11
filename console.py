@@ -6,7 +6,7 @@ Returns:
 """
 import cmd
 
-import models
+from models import storage
 from models.base_model import BaseModel
 from models.user import User
 from models.city import City
@@ -23,7 +23,7 @@ class HBNBCommand(cmd.Cmd):
         cmd (_type_): _description_
     """
     prompt = "(hbnb)"
-    storage = models.storage
+    storage = storage
     def do_EOF(self):
         """_summary_
             Quits the program with a new line. - Ctrl + d
