@@ -5,6 +5,16 @@
 """
 
 import json
+from models.base_model import BaseModel
+from models.user import User
+from models.state import State
+from models.amenity import Amenity
+from models.city import City
+from models.place import Place
+from models.review import Review
+
+models_classes = {"Amenity": Amenity, "BaseModel": BaseModel, "City": City, "Place": Place, "Review": Review, "State": State, "User": User}
+
 class FileStorage:
     """_summary_
         Private class attributes:
@@ -51,9 +61,7 @@ class FileStorage:
             with open(self.__file_path, mode="r") as file:
                 json_data = json.load(file)
             for key in json_data:
-                self.__objects[key] = 
-
-
-
-
-    
+                self.__objects[key] = models_classes[json_data[key]['__class__']](**json_data[key])
+        except:
+            pass
+        #Easier to ask for forgiveness than permission - {E}    
