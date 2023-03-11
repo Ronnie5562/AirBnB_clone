@@ -12,4 +12,7 @@ class Amenity(BaseModel):
     name = ""
 
     def __init__(self, *args, **kwargs):
+        """_summary_
+            This constructor method inherits from the constructor method in BaseModel
+        """
         super().__init__(*args, **kwargs)
