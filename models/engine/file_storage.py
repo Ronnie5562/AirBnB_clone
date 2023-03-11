@@ -25,4 +25,9 @@ class FileStorage:
         """
         return self.__objects
     
+    def new(self, obj):
+        """_summary_
+            This mothod creates a new instance of a specific class.
+        """
+
     
