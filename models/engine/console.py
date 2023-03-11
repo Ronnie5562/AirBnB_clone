@@ -17,8 +17,8 @@ class HBNBCommand(cmd.Cmd):
     
     def emptyline(self):
         """_summary_
-            Command to executed when empty line + <ENTER> key
-                ==> The pr
+            Command to executed when User inputs an empty line + <ENTER> key
+                ==> The program moves to the next line.
         """
         pass
 
