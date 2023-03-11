@@ -31,6 +31,29 @@ class FileStorage:
         """
 
         self.__objects["{}.{}".format(obj.__class__.__name__, obj.id)] = obj
+    
+    def save(self):
+        """_summary_
+            This mothod serializes __objects to the JSON file (path: __file_path)
+        """
+        with open(self.__file_path, mode="w") as file:
+            # json.dump(self.__objects, f, default=lambda obj: obj.to_dict())
+            new_dict = {}
+            for key, value in self.__objects.items():
+                new_dict[key] = value.to_dict()
+            json.dump(new_dict, file)
+
+    def reload(self):
+        """_summary_
+            This module deserializes the JSON file to __objects (only if the JSON file (__file_path) exists ; otherwise, do nothing. If the file doesn’t exist, no exception should be raised)
+        """
+        try:
+            with open(self.__file_path, mode="r") as file:
+                data = json.load(file)
+            for key in data:
+                self.__objects[key] = 
+
+
 
 
     
