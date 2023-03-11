@@ -4,7 +4,6 @@
 """
 
 from uuid import uuid4
-from models import storage
 from datetime import datetime
 
 class BaseModel:
@@ -17,6 +16,7 @@ class BaseModel:
     """
 
     def __init__(self, *args, **kwargs):
+        from models import storage
         """_summary_
             This is the constructor method for initializing instances of our BaseModel
             args(tuple): it is a tuple of all positional arguments
