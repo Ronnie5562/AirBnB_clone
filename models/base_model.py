@@ -16,6 +16,7 @@ class BaseModel:
     """
 
     def __init__(self, *args, **kwargs):
+        # I had to import storage inside here because i'll get a circular importation error if it is at the top level of the file
         from models import storage
         """_summary_
             This is the constructor method for initializing instances of our BaseModel
@@ -45,6 +46,8 @@ class BaseModel:
         """_summary_
             save(self): updates the public instance attribute updated_at with the current datetime
         """
+        # I had to import storage inside here because i'll get a circular importation error if it is at the top level of the file
+        from models import storage
         self.updated_at = datetime.now()
         storage.save()
 
