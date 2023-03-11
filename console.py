@@ -4,7 +4,9 @@
 Returns:
     _type_: _description_
 """
+from shlex import split
 import cmd
+import re
 
 from models import storage
 from models.base_model import BaseModel
@@ -14,6 +16,20 @@ from models.amenity import Amenity
 from models.place import Place
 from models.state import State
 from models.review import Review
+
+
+def parse(arg):
+    curly_braces = re.search(r'\{(.*?)\}', arg)
+    square_brackets = re.search(r'\[(.*?)\]', arg)
+
+    if curly_braces is None:
+        if square_brackets is None:
+            #return [x.strip(",") for x in arg.split()]
+            return [x.strip(",") for x in split(arg)]
+        else:
+            before_square_brackets = split(arg[0:square_brackets.span()[0]])
+            args = [x.strip() for x in before_square_brackets]
+            args.append()
 
 class HBNBCommand(cmd.Cmd):
     """_summary_
@@ -44,6 +60,8 @@ class HBNBCommand(cmd.Cmd):
                 ==> The program moves to the next line.
         """
         pass
+
+    def do_create(self, argv):
 
 
 
