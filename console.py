@@ -1,5 +1,11 @@
 import cmd
 class HBNBCommand(cmd.Cmd):
+    """_summary_
+    This class is the main 
+
+    Args:
+        cmd (_type_): _description_
+    """
     def do_EOF(self):
         """_summary_
             Quits the program with a new line. - Ctrl + d

@@ -18,9 +18,9 @@ The console is the first segment of the AirBnB project at Holberton School that 
 * [USAGE](#USAGE)
 * [EXAMPLES OF USE](#EXAMPLES-OF-USE)
 * [BUGS](#BUGS)
+* [CONCEPTS LEARNT](#CONCEPTS-LEARNT)
 * [AUTHOR](#AUTHOR)
 * [LICENCE](#LICENCE)
-* [CONCEPTS LEARNT](#CONCEPTS-LEARNT)
 
 ## ENVIRONMENT
 This project is interpreted/tested on Ubuntu 14.04 LTS using python3 (version 3.4.3)
