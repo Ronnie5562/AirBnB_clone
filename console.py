@@ -1,11 +1,29 @@
+#!/usr/bin/python3
+"""_summary_
+    ==> This module is the entry point of the command interpreter { console }.
+Returns:
+    _type_: _description_
+"""
 import cmd
+
+import models
+from models.base_model import BaseModel
+from models.user import User
+from models.city import City
+from models.amenity import Amenity
+from models.place import Place
+from models.state import State
+from models.review import Review
+
 class HBNBCommand(cmd.Cmd):
     """_summary_
-    This class is the main 
+    This is the main class that runs the console.
 
     Args:
         cmd (_type_): _description_
     """
+    prompt = "(hbnb)"
+    storage = models.storage
     def do_EOF(self):
         """_summary_
             Quits the program with a new line. - Ctrl + d
@@ -23,10 +41,12 @@ class HBNBCommand(cmd.Cmd):
     
     def emptyline(self):
         """_summary_
-            Command to executed when User inputs an empty line + <ENTER> key
+            This is executed when a User inputs an empty line + <ENTER> key
                 ==> The program moves to the next line.
         """
         pass
+
+    def 
 
 
 
