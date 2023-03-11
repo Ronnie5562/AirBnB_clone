@@ -64,4 +64,4 @@ class FileStorage:
                 self.__objects[key] = models_classes[json_data[key]['__class__']](**json_data[key])
         except:
             pass
-        #Easier to ask for forgiveness than permission - {E}    
+        #Easier to ask for forgiveness than permission
