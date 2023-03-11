@@ -49,8 +49,8 @@ class FileStorage:
         """
         try:
             with open(self.__file_path, mode="r") as file:
-                data = json.load(file)
-            for key in data:
+                json_data = json.load(file)
+            for key in json_data:
                 self.__objects[key] = 
 
 
