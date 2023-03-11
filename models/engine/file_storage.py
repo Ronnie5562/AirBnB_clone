@@ -30,4 +30,7 @@ class FileStorage:
             This mothod creates a new instance of a specific class.
         """
 
+        self.__objects["{}.{}".format(obj.__class__.__name__, obj.id)] = obj
+
+
     
