@@ -23,7 +23,6 @@ class HBNBCommand(cmd.Cmd):
         cmd (_type_): _description_
     """
     prompt = "(hbnb)"
-    storage = storage
     def do_EOF(self):
         """_summary_
             Quits the program with a new line. - Ctrl + d
