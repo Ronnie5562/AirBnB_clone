@@ -23,7 +23,7 @@ class HBNBCommand(cmd.Cmd):
         cmd (_type_): _description_
     """
     prompt = "(hbnb)"
-    def do_EOF(self):
+    def do_EOF(self, argv):
         """_summary_
             Quits the program with a new line. - Ctrl + d
                 ==> Any method that returns true quits the program.
@@ -31,7 +31,7 @@ class HBNBCommand(cmd.Cmd):
         print()
         return True
     
-    def do_quit(self):
+    def do_quit(self, exiargvt):
         """_summary_
             Quits the program with a new line.
                 ==> Any method that returns true quits the program.
