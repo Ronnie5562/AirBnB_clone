@@ -1,1 +1,14 @@
-{"Amenity.cc895778-261b-47fb-8494-c75bbf1479d5": {"id": "cc895778-261b-47fb-8494-c75bbf1479d5", "created_at": "2023-03-12T13:30:29.264450", "updated_at": "2023-03-12T13:30:29.265448", "__class__": "Amenity"}, "Amenity.0508dc04-1888-4d81-b412-2948cfa37b75": {"id": "0508dc04-1888-4d81-b412-2948cfa37b75", "created_at": "2023-03-12T13:30:50.418201", "updated_at": "2023-03-12T13:30:50.418201", "__class__": "Amenity"}, "Amenity.792f8992-0815-4a7a-9a40-358c233dc7e0": {"id": "792f8992-0815-4a7a-9a40-358c233dc7e0", "created_at": "2023-03-12T13:31:07.155599", "updated_at": "2023-03-12T13:31:07.155599", "__class__": "Amenity"}, "Amenity.7c8dd6ad-ef5a-46ff-8e50-7db4b2dc70cc": {"id": "7c8dd6ad-ef5a-46ff-8e50-7db4b2dc70cc", "created_at": "2023-03-12T13:35:24.820215", "updated_at": "2023-03-12T13:35:24.820215", "__class__": "Amenity"}, "City.3b63fa98-7d50-491f-9ce0-494f18dfeb46": {"id": "3b63fa98-7d50-491f-9ce0-494f18dfeb46", "created_at": "2023-03-12T13:36:27.080358", "updated_at": "2023-03-12T13:36:27.080358", "__class__": "City"}, "City.eef275ff-0870-4db3-9a1c-c3a2858d5d4f": {"id": "eef275ff-0870-4db3-9a1c-c3a2858d5d4f", "created_at": "2023-03-12T15:49:00.013731", "updated_at": "2023-03-12T15:49:00.013731", "__class__": "City"}}
+{
+  "Amenity.f46ee1e0-ec80-421d-858b-61bc7b28a17c": {
+    "id": "f46ee1e0-ec80-421d-858b-61bc7b28a17c",
+    "created_at": "2023-03-12T21:57:57.405365",
+    "updated_at": "2023-03-12T21:57:57.405365",
+    "__class__": "Amenity"
+  },
+  "City.80738cd8-2a7a-4122-a318-f2726a93e891": {
+    "id": "80738cd8-2a7a-4122-a318-f2726a93e891",
+    "created_at": "2023-03-12T21:59:44.213253",
+    "updated_at": "2023-03-12T21:59:44.213253",
+    "__class__": "City"
+  }
+}
