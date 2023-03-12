@@ -129,7 +129,16 @@ class HBNBCommand(cmd.Cmd):
                 print("** instance id missing **")
             else:
                 instance_id = "{}.{}".format(arg_list[0], arg_list[1])
-                if instance_id in self.storage().all():
+                if instance_id in self.storage.all():
+                    if len(arg_list) == 2:
+                        print("** attribute name missing **")
+                    elif len(arg_list) == 3:
+                        print("** value missing **")
+                    else:
+                        
+                else:
+                    print("** no instance found **")
+
 
 
 

@@ -31,20 +31,20 @@ class FileStorage:
 
     def all(self):
         """_summary_
-            This mothod returns the dictionary ==> { __objects }
+            This method returns the dictionary ==> { __objects }
         """
         return self.__objects
     
     def new(self, obj):
         """_summary_
-            This mothod creates a new instance of a specific class.
+            This method creates a new instance of a specific class.
         """
 
         self.__objects["{}.{}".format(obj.__class__.__name__, obj.id)] = obj
     
     def save(self):
         """_summary_
-            This mothod serializes __objects to the JSON file (path: __file_path)
+            This method serializes __objects to the JSON file (path: __file_path)
         """
         with open(self.__file_path, mode="w") as file:
             # json.dump(self.__objects, f, default=lambda obj: obj.to_dict())
@@ -55,7 +55,7 @@ class FileStorage:
 
     def reload(self):
         """_summary_
-            This module deserializes the JSON file to __objects (only if the JSON file (__file_path) exists ; otherwise, do nothing. If the file doesn’t exist, no exception should be raised)
+            This method deserializes the JSON file to __objects (only if the JSON file (__file_path) exists ; otherwise, do nothing. If the file doesn’t exist, no exception should be raised)
         """
         try:
             with open(self.__file_path, mode="r") as file:
