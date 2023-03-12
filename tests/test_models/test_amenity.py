@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-    This module test the Amenity class.
+    Test suite for the Amenity class present in models.amenity
 """
 import unittest
 from models.amenity import Amenity

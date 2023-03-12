@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""
+"""_summary_
     This module tests state module present in models.
 """
 import unittest
@@ -19,3 +19,7 @@ class TestState(unittest.TestCase):
             This test validate that creation of name.
         """
         self.assertEqual(self.state.name, '')
+
+
+if __name__ == "__main__":
+    unittest.main()

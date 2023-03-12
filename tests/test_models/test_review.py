@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """_summary_
-    This module test the review module present in models
+    Test suite for the Review class in models.review
 """
 import unittest
 from models.review import Review
