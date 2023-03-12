@@ -112,12 +112,25 @@ class HBNBCommand(cmd.Cmd):
             self.storage.save()
         else:
             print("** no instance found **")
+    
+    def do_show(self, argv):
+        """_summary_
+            Prints the string representation of an instance based on the class name and id. 
+                ==> Usage: $ show BaseModel 1234-1234-1234.
+        """
+        args = parse(argv)
+        if args:
+            if len(args) != 2:
+                print("** instance id missing **")
+            else:
+                key = "{}.{}".format(args[0], args[1])
+
 
     def do_update(self, argv):
         """_summary_
             This command updates an instance based on its class and id
                 ==> __syntax__
-                    Usage: update <class name> <id> <attribute name> "<attribute value>"
+                    Usage: $ update <class name> <id> <attribute name> "<attribute value>"
                         __Example__:
                         update BaseModel 1234-1234-1234 email "aibnb@mail.com"
         Args:
