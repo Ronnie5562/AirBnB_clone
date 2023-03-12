@@ -9,8 +9,8 @@ from models.base_model import BaseModel
 
 
 class TestAmenity(unittest.TestCase):
-    """
-    This test_class tests the Amenity module present in models.
+    """_summary_
+        This test_class tests the Amenity module present in models.
     """
 
     def setUp(self):

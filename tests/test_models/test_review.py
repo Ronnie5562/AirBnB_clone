@@ -19,3 +19,7 @@ class TestReview(unittest.TestCase):
             This test validate that creation proccess was correct.
         """
         self.assertEqual(self.review.text, '')
+
+
+if __name__ == "__main__":
+    unittest.main()
