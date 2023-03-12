@@ -7,6 +7,7 @@ Returns:
 from shlex import split
 import cmd
 import re
+import os
 
 import models
 from models.base_model import BaseModel
@@ -145,6 +146,36 @@ class HBNBCommand(cmd.Cmd):
                 print("** class doesn't exist **")
             else:
                 print([str(obj) for obj in objects if args[0] in str(obj)])
+
+    def do_destroy(self, argv):
+        """_summary_
+            Deletes an instance based on the class name and id (save the change into the JSON file). 
+                ==> Usage: $ destroy BaseModel 1234-1234-1234
+
+        Args:
+            argv : class_name, id
+        """
+        arg_list = validate_args(argv)
+        if arg_list:
+            if len(arg_list) == 1:
+                print("** instance id missing **")
+            else:
+                key = "{}.{}".format(*arg_list)
+                if key in self.storage.all():
+                    del self.storage.all()[key]
+                    self.storage.save()
+                else:
+                    print("** no instance found **")
+
+    def do_clear(self, _):
+        """
+            Clears the terminal
+                ==> Usage: clear
+        """
+        if os.name == 'posix':
+            os.system('clear')
+        else:
+            os.system('cls')
 
 
     def do_update(self, argv):
