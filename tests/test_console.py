@@ -37,6 +37,10 @@ class TestHBNBCommand(unittest.TestCase):
         self.out_test(cmd.do_create, '', HBNBCommand.ERROR_CLASS_NAME)
         self.out_test(cmd.do_create, 'myModel', HBNBCommand.ERROR_CLASS)
 
+
     # def test_create_ok(self):
     #     cmd = HBNBCommand()
     #     out = self.out_test(cmd.do_create, 'BaseModel', '')
+
+if __name__ == "__main__":
+    unittest.main()
