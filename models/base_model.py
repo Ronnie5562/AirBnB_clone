@@ -51,3 +51,20 @@ class BaseModel:
         self.updated_at = datetime.now()
         storage.save()
 
+    def to_dict(self):
+        """_summary_
+            returns a dictionary containing all keys/values of __dict__
+            of the instance:
+
+            - only instance attributes set will be returned
+            - a key __class__ is added with the class name of the object
+            - created_at and updated_at must be converted to string      object in ISO format.
+        """
+        new_dict = self.__dict__.copy()
+        new_dict['__class__'] = self.__class__.__name__
+        for key, value in self.__dict__.items():
+            if key in ["created_at", "updated_at"]:
+                value = self.__dict__[key].isoformat()
+                new_dict[key] = value
+        return new_dict
+

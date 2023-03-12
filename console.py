@@ -8,7 +8,7 @@ from shlex import split
 import cmd
 import re
 
-from models import storage
+import models
 from models.base_model import BaseModel
 from models.user import User
 from models.city import City
@@ -17,6 +17,15 @@ from models.place import Place
 from models.state import State
 from models.review import Review
 
+CLASSES = [
+    "BaseModel",
+    "User",
+    "City",
+    "Place",
+    "State",
+    "Amenity",
+    "Review"
+]
 
 def parse(arg):
     curly_braces = re.search(r'\{(.*?)\}', arg)
@@ -28,8 +37,34 @@ def parse(arg):
             return [x.strip(",") for x in split(arg)]
         else:
             before_square_brackets = split(arg[0:square_brackets.span()[0]])
-            args = [x.strip() for x in before_square_brackets]
-            args.append()
+            args = [x.strip(",") for x in before_square_brackets]
+            args.append(square_brackets.group())
+            return args
+    else:
+        before_curly_braces = split(arg[0:curly_braces.span()[0]])
+        args = [x.strip(",") for x in before_curly_braces]
+        args.append(curly_braces.group())
+        return args
+
+
+def validate_args(args):
+    """checks if args is valid
+
+    Args:
+        args (str): the string containing the arguments passed to a command
+
+    Returns:
+        Error message if args is None or not a valid class, else the arguments
+    """
+    arg_list = parse(args)
+
+    if len(arg_list) == 0:
+        print("** class name missing **")
+    elif arg_list[0] not in CLASSES:
+        print("** class doesn't exist **")
+    else:
+        return arg_list
+
 
 class HBNBCommand(cmd.Cmd):
     """_summary_
@@ -39,6 +74,7 @@ class HBNBCommand(cmd.Cmd):
         cmd (_type_): _description_
     """
     prompt = "(hbnb)"
+    storage = models.storage
     def do_EOF(self, argv):
         """_summary_
             Quits the program with a new line. - Ctrl + d
@@ -62,6 +98,40 @@ class HBNBCommand(cmd.Cmd):
         pass
 
     def do_create(self, argv):
+        """_summary_
+            It creates a new instance of BaseModel and saves it.
+
+        Args:
+            argv : argument
+        Return:
+            It prints out the id of the newly created instance
+        """
+        val_args = validate_args(argv)
+        if val_args:
+            print(eval(val_args[0])().id)
+            self.storage.save()
+        else:
+            print("** no instance found **")
+
+    def do_update(self, argv):
+        """_summary_
+            This command updates an instance based on its class and id
+                ==> __syntax__
+                    Usage: update <class name> <id> <attribute name> "<attribute value>"
+                        __Example__:
+                        update BaseModel 1234-1234-1234 email "aibnb@mail.com"
+        Args:
+            argv : Update to be made
+        """
+        arg_list = validate_args(argv)
+        if arg_list:
+            if len(arg_list) == 1:
+                print("** instance id missing **")
+            else:
+                instance_id = "{}.{}".format(arg_list[0], arg_list[1])
+                if instance_id in self.storage().all():
+
+
 
 
 

@@ -24,7 +24,7 @@ class FileStorage:
         all(self): returns the dictionary __objects
         new(self, obj): sets in __objects the obj with key <obj class name>.id
         save(self): serializes __objects to the JSON file (path: __file_path)
-        reload(self): deserializes the JSON file to __objects (only if the JSON file (__file_path) exists ; otherwise, do nothing. If the file doesn’t exist, no exception should be raised)
+        reload(self): deserializes the JSON file to __objects (only if the JSON file (__file_path) exists ; otherwise, do nothing. If the file doesn't exist, no exception should be raised)
     """
     __file_path = "file.json"
     __objects = {}
@@ -51,7 +51,7 @@ class FileStorage:
             new_dict = {}
             for key, value in self.__objects.items():
                 new_dict[key] = value.to_dict()
-            json.dump(new_dict, file)
+            json.dump(new_dict, file, indent=2)
 
     def reload(self):
         """_summary_
