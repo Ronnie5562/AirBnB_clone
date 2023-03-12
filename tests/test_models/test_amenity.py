@@ -43,3 +43,7 @@ class TestAmenity(unittest.TestCase):
         """
         self.assertIs(type(self.amenity.name), str)
         self.assertFalse(bool(getattr(self.amenity, "name")))
+
+
+if __name__ == "__main__":
+    unittest.main()
