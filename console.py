@@ -124,6 +124,10 @@ class HBNBCommand(cmd.Cmd):
                 print("** instance id missing **")
             else:
                 key = "{}.{}".format(args[0], args[1])
+                if key in self.storage.all():
+                    print(self.storage.all()[key])
+                else:
+                    print("** no instance found **")
 
 
     def do_update(self, argv):
