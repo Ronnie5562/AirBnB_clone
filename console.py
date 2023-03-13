@@ -77,6 +77,13 @@ class HBNBCommand(cmd.Cmd):
     prompt = "(hbnb)"
     storage = models.storage
 
+    def emptyline(self):
+        """_summary_
+            This is executed when a User inputs an empty line + <ENTER> key
+                ==> The program moves to the next line.
+        """
+        pass
+
     def default(self, arg):
         """Default behaviour for cmd module when input is invalid"""
         action_map = {
@@ -116,12 +123,6 @@ class HBNBCommand(cmd.Cmd):
         """
         return True
     
-    def emptyline(self):
-        """_summary_
-            This is executed when a User inputs an empty line + <ENTER> key
-                ==> The program moves to the next line.
-        """
-        pass
 
     def do_create(self, argv):
         """_summary_
@@ -136,8 +137,7 @@ class HBNBCommand(cmd.Cmd):
         if val_args:
             print(eval(val_args[0])().id)
             self.storage.save()
-        else:
-            print("** no instance found **")
+        
     
     def do_show(self, argv):
         """_summary_
@@ -246,10 +246,6 @@ class HBNBCommand(cmd.Cmd):
             if model_class[0] == type(instance).__name__:
                 count += 1
         print(count)
-
-
-
-
 
 
 

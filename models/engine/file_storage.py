@@ -58,7 +58,7 @@ class FileStorage:
             This method deserializes the JSON file to __objects (only if the JSON file (__file_path) exists ; otherwise, do nothing. If the file doesn't exist, no exception should be raised)
         """
         try:
-            with open(self.__file_path, mode="r") as file:
+            with open(self.__file_path, 'r') as file:
                 json_data = json.load(file)
             for key in json_data:
                 # The code below, creates a new instance of our models_classes depending on the json_data received.
