@@ -5,7 +5,10 @@ section.filters {
     border: 1px solid #DDDDDD;
     border-radius: 4px;
     display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
 }
+
 section.filters button {
     font-size: 18px;
     background-color: #FF5A5F;
@@ -14,23 +17,31 @@ section.filters button {
     width: 20%;
     border: 0;
     border-radius: 4px;
-    margin: auto 30px;
+    margin-left: auto;
+    margin-right: 30px;
 }
+
 section.filters button:hover {
     opacity: 90%;
 }
+
 section.filters div.locations, section.filters div.amenities {
     height: 100%;
     width: 25%;
-    border-right: 1px solid #DDDDDD;
-    
+    margin-left: 30px;
 }
+
+section.filters div.locations{
+    border-right: 1px solid #DDDDDD;
+}
+
 div.locations h3, div.amenities h3  {
     font-weight: 600;
     margin-bottom: 0px;
 }
+
 div.locations h4, div.amenities h4 {
     font-weight: 400;
     font-size: 14px;
-    margin: 4px auto;
+    margin: auto;
 }
