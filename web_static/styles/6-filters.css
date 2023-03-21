@@ -2,30 +2,36 @@ section.filters {
   background-color: white;
   height: 70px;
   width: 100%;
-  border: 1px solid #dddddd;
+  border: 1px solid #DDDDDD;
   border-radius: 4px;
   display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
 }
+
 section.filters button {
   font-size: 18px;
-  background-color: #ff5a5f;
-  color: #ffffff;
+  background-color: #FF5A5F;
+  color: #FFFFFF;
   height: 48px;
   width: 20%;
   border: 0;
   border-radius: 4px;
-  margin: auto 30px;
+  margin-left: auto;
+  margin-right: 30px;
 }
+
 section.filters button:hover {
-  opacity: 90%;
+    opacity: 90%;
 }
+
 section.filters div.locations,
 section.filters div.amenities {
   height: 100%;
   width: 25%;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  box-sizing: border-box;
 }
 section.filters div.locations {
   border-right: 1px solid #dddddd;
@@ -57,15 +63,12 @@ ul.popover {
   padding-left: 0px;
   padding-bottom: 20px;
   padding-top: 20px;
-}
-div.locations ul,
-div.amenities ul {
   display: none;
 }
 section.filters div.locations:hover > ul,
 section.filters div.amenities:hover > ul {
   display: block;
-  z-index: 999;
+  z-index: 50;
 }
 section.filters div.locations,
 section.filters div.amenities {
