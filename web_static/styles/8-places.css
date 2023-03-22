@@ -20,7 +20,7 @@
         border-radius: 4px;
         display: flex;
         flex-wrap: wrap;
-        justify-content: flex-start;
+        justify-content: flex-start; 
 }
 
 .places article h2 {
@@ -51,11 +51,10 @@
         border-left: none;
         border-right: none;
         display: flex;
-        float: left;
         font-size: 12px;
 }
 
-div.information div.max_guest, div.information div.number_rooms, div.information div.number_bathrooms {
+div.information > div.max_guest, div.number_rooms, div.number_bathrooms {
         width: 100px;
         background-repeat: no-repeat;
         background-position: center top;
